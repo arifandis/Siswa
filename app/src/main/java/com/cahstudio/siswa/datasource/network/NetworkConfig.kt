@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 class NetworkConfig {
     companion object{
 
-        val BASE_URL = "http://192.168.0.3:8888/api-siswa/index.php/"
+        val BASE_URL = "http://siswa.cahstudio.com/api/index.php/"
 
         fun getService(): Retrofit {
             val client = OkHttpClient.Builder()

@@ -27,13 +27,17 @@ class SiswaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_siswa)
 
         mApi = NetworkConfig.getService().create(ApiEndPoint::class.java)
-        mAdapter = SiswaAdapter(this,mSiswaList,{siswa ->  },{siswa ->  deleteSiswa(siswa)})
+        mAdapter = SiswaAdapter(this,mSiswaList,{siswa -> gotoEdit(siswa) },{siswa ->  deleteSiswa(siswa)})
 
         val layoutManager = LinearLayoutManager(this)
         siswa_recyclerview.layoutManager = layoutManager
         siswa_recyclerview.adapter = mAdapter
 
         getSiswa()
+
+        siswa_btnAdd.setOnClickListener {
+            startActivity(Intent(this,AddSiswaActivity::class.java))
+        }
     }
 
     fun getSiswa(){
@@ -75,7 +79,9 @@ class SiswaActivity : AppCompatActivity() {
     }
 
     fun gotoEdit(siswa: Siswa){
-
+        val intent = Intent(this,EditSiswaActivity::class.java)
+        intent.putExtra("siswa",siswa)
+        startActivity(intent)
     }
     
     fun deleteSiswa(siswa: Siswa){

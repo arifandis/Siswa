@@ -6,5 +6,5 @@ data class UpdateSiswaRequest(
     @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String?,
     @SerializedName("gender") val gender: String?,
-    @SerializedName("jurusan") val jurusan: String?
+    @SerializedName("jurusan_id") val jurusan: String? = null
 )

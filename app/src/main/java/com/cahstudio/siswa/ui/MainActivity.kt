@@ -86,4 +86,9 @@ class MainActivity : AppCompatActivity() {
 
         main_acvJurusan.setChart(pie)
     }
+
+    override fun onResume() {
+        super.onResume()
+        getChartData()
+    }
 }

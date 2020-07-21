@@ -14,6 +14,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:hint="Nama Lengkap"
+        android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:hint="Laki-laki/Perempuan"
+        android:inputType="textCapSentences"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addsiswa_etName" />
